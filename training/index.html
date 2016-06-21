@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Health Audit Australia</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Health Audit NZ Ltd is recognised as a leading provider of auditing and certification services in the health and disability sector.">
+
+
+    <!-- Custom CSS & Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link rel="stylesheet" href="../style.css">
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Rambla:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,100,400italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Header Changer -->
+    <!-- jQuery Version 1.11.0 -->
+<script src="../js/jquery-1.11.0.js"></script>
+<script>
+    $(document).ready(function () {
+        var header = $('header');
+
+        var backgrounds = new Array(
+            'url(../img/background/1.jpg)', 'url(../img/background/2.jpg)', 'url(../img/background/3.jpg)');
+//, 'url(../img/background/2.jpg)'
+        var current = 0;
+
+        function nextBackground() {
+            current++;
+            current = current % backgrounds.length;
+            header.css('background-image', backgrounds[current]);
+        }
+        setInterval(nextBackground, 5000);
+
+        header.css('background-image', backgrounds[0]);
+    });
+</script>
+<script>
+    (function (jQuery) {
+        var matched,
+            userAgent = navigator.userAgent || "";
+
+        // Use of jQuery.browser is frowned upon.
+        // More details: http://api.jquery.com/jQuery.browser
+        // jQuery.uaMatch maintained for back-compat
+        jQuery.uaMatch = function (ua) {
+            ua = ua.toLowerCase();
+
+            var match = /(chrome)[ \/]([\w.]+)/.exec(ua) ||
+                /(webkit)[ \/]([\w.]+)/.exec(ua) ||
+                /(opera)(?:.*version)?[ \/]([\w.]+)/.exec(ua) ||
+                /(msie) ([\w.]+)/.exec(ua) ||
+                ua.indexOf("compatible") < 0 && /(mozilla)(?:.*? rv:([\w.]+))?/.exec(ua) || [];
+
+            return {
+                browser: match[1] || "",
+                version: match[2] || "0"
+            };
+        };
+
+        matched = jQuery.uaMatch(userAgent);
+
+        jQuery.browser = {};
+
+        if (matched.browser) {
+            jQuery.browser[matched.browser] = true;
+            jQuery.browser.version = matched.version;
+        }
+
+        // Deprecated, use jQuery.browser.webkit instead
+        // Maintained for back-compat only
+        if (jQuery.browser.webkit) {
+            jQuery.browser.safari = true;
+        }
+
+    }(jQuery));
+</script>
+</head>
+
+
+    <body id="page-top" class="index">
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top hanzcolour">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="page-scroll" href="#page-top">
+                <div class="logo light-logo"></div>
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="hidden">
+                    <a href="#page-top"></a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="../#aboutus">About Us</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="../#process">Our Process</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="../#standards">Standards</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="../standards">Standards</a>
+                </li>
+
+                <li>
+                    <a class="page-scroll" href="../#team">Team</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="../#contact">Contact Us</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="../training">Training</a>
+                </li>
+
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+    <div role="main" class="main">
+    <section class="page-top" style="padding-bottom: 0;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="breadcrumb">
+                        <li><a href="#">Home</a>
+                        </li>
+                        <li class="active">Training</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="hanz-text">Health Audit Training</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container">
+
+        <div class="row center">
+            <div class="col-md-12">
+                <h2 style="font-size: 18pt; line-height: 1.3;" class="hanz-text">
+								Health Audit Training Ltd has been providing training and credentialing services,<br> designed to meet the needs of healthcare personnel for training and qualifications in <br>•  Auditing of quality and risk management systems<br>•  Quality and risk management in healthcare settings
+</h2>
+            </div>
+        </div>
+
+        <hr class="tall" />
+
+
+        <div class="col-md-12 center" align="center">
+            <div>
+                <div class="feature-box">
+                    <div class="feature-box-info"> <img src="https://upload.wikimedia.org/wikipedia/en/c/c3/New_Zealand_Qualifications_Authority_logo.svg" alt="" width="70vh" />
+                        <h4 class="shorter"> Accredited by the New Zealand Qualifications Authority to assess Unit Standards 8084, 8085 and 8086</h4>
+                    </div>
+                </div>
+                <hr class="tall" />
+            </div>
+        </div>
+    </div>
+    <section id="offer" class="bg-light-gray">
+        <div class="container">
+            <div>
+                <h2>We offer
+        <strong>the following</strong>
+      </h2>
+            </div>
+            <br>
+            <br>
+            <div class="featured-boxes" style="text-align: center;">
+                <div class="col-md-3 col-sm-6">
+                    <div class="featured-box featured-box-primary">
+                        <div class="box-content">
+                            <p></p>
+                            <h4 class="black">Healthcare Auditor Course</h4>
+                            <p>
+                                <br> </p>
+                            <p></p>
+                            <a data-toggle="modal" data-target="#healthauditcourse">
+                                <button class="btn btn-primary btn-lg push-top push-bottom" data-toggle="modal">
+                                    Read more
+                                </button>
+                            </a>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="featured-box featured-box-secundary">
+                        <div class="box-content">
+                            <p></p>
+                            <h4 class="black">Quality Management in Healthcare Course</h4>
+                            <p>
+                                <br>
+                            </p>
+                            <p></p>
+                            <a data-toggle="modal" data-target="#qualitymanagement">
+                                <button class="btn btn-primary btn-lg push-top push-bottom" data-toggle="modal">
+                                    Read more
+                                </button>
+                            </a>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="featured-box featured-box-tertiary">
+                        <div class="box-content">
+                            <p></p>
+                            <h4 class="black">Healthcare Auditor Accreditation Programme</h4>
+                            <p>
+                                <br>
+                            </p>
+                            <p></p>
+                            <!-- <a data-toggle="modal" data-target="#auditaccred">
+                                <button class="btn btn-primary btn-lg push-top push-bottom" data-toggle="modal">
+                                    Read more
+                                </button>
+                            </a>-->
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="featured-box featured-box-tertiary">
+                        <div class="box-content">
+                            <p></p>
+                            <h4 class="black">Internal Auditor and Management Systems Courses</h4>
+                            <p>Kindly contact us to express your interest and advise your needs. We will respond with a free, no-obligation course outline and estimated cost.
+
+                            </p>
+                            <p></p>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+<hr />
+<section>
+    <div class="container">
+
+        <div class="row center">
+            <div class="col-md-12">
+                <h1 class="short word-rotator-title" data-appear-animation="fadeInLeft">
+								Course Dates</h1>
+
+            </div>
+        </div>
+        <hr class="tall" />
+        <div class="row">
+            <div class="container">
+                <div class="col-md-12">
+                    <div class="tabs">
+                        <ul class="nav nav-tabs nav-justified">
+                            <li class="active">
+                                <a href="#us8086" data-toggle="tab" class="text-center">Healthcare Auditor Course<br>NZQA Unit Standard 8086<br>&nbsp;</a>
+                            </li>
+                            <li>
+                                <a href="#us8085" data-toggle="tab" class="text-center">Quality Management in Healthcare Course<br>NZQA Unit Standard 8085</a>
+                            </li>
+                            <li>
+                                <a href="#us8084" data-toggle="tab" class="text-center"> Healthcare Auditor Accreditation Programme<br>NZQA Unit Standard 8084</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-content">
+                        <div id="us8086" class="tab-pane active">
+                            <div class="container">
+                                <p>
+                                    The Healthcare Auditor Course has run regularly for almost 10 years and is still in demand.
+                                    <br>There is a total of 5 classroom days of lectures, workshop, case study and written examination:
+                                    <br>Course Dates: Week of 4-8 April, 2016
+                                    <br> Venue - Auckland, TBC
+                                </p>
+                            </div>
+                        </div>
+                        <div id="us8085" class="tab-pane ">
+                            <div class="container">
+
+                                <p>The Healthcare Quality Manage Course is a total of 5 classroom days of lectures, workshops and written examination. It has close links to the popular Healthcare Auditor Course and suits the needs of healthcare professionals for ongoing education in quality management.
+                                    <br>Course dates: Next course dates to be advised - please contact us to register your interest.
+                                    <br> Venue - Waipuna Hotel & Conference Centre, Auckland
+                                </p>
+                            </div>
+                        </div>
+                        <div id="us8084" class="tab-pane ">
+                            <div class="container">
+
+                                <p>Because the Programme is workplace-based, participants can plan their own timetable for completion of tasks and submission for assessment. The Accreditation Programme is undertaken in two stages within a twelve-month period.
+                                    <br> Contact us to register and schedule your personal Accreditaion Programme timetable.
+                                </p>
+                            </div>
+                        </div>
+                        <div id="qm" class="tab-pane">
+                            <div class="container">
+
+                                <p>Health Audit Training Ltd delivers these short courses for organisations and are normally run on an "in-house" basis. Kindly contact us to express your interest and advise your needs. We will respond with a free, no-obligation course outline and estimated cost.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+</section>
+    <footer class="short hanzcolour" id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8" id="infolol">
+
+                <h3>Health Audit Australia</h3>
+                <p class="white"> A subsidiary of <a href="http://healthauditgroup.com">Health Audit Group</a>
+                </p>
+                <p class="white" style="padding-top: 70px;">© Copyright Health Audit Australia 2015. All Rights Reserved.</p>
+
+                <hr class="light">
+            </div>
+            <div class="col-md-3 col-md-offset-1">
+                <h5 class="contact">Contact Us</h5>
+                <span class="phone">(1800) 087-659</span>
+                <ul class="list icons list-unstyled">
+                    <li><i class="fa fa-envelope white"></i> <a href="mailto:manager@healthauditgroup.com">manager@healthauditgroup.com</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</footer>
+    <div class="modal fade" id="gapanalysis" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="text-align:left; width:40%; height:30%;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel">Gap Analysis</h4>
+            </div>
+            <div class="modal-body">
+                <ul>
+                    <li>This assesses the readiness of your quailty and risk management systems and greatly helps in the planning and preparation for a subsequent certification audit.</li>
+                    <li> A gap analysis involves an on-site review by a Health Audit NZ lead auditor with your management and staff members.</li>
+                    <li>The auditor samples documentation and interviews personnel in order to gather information about how the management system addresses the requirements of the certification standards.</li>
+                    <li> Documentation reviewed during the gap analysis includes organisational and health service policy and procedures and also records of clients, staff members and service delivery.
+                    </li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="certaudit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel">Certification Audit</h4>
+            </div>
+            <div class="modal-body">
+                <img src="/img/process/certaudit.svg" alt="" width="100%" /> </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="survaudit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel">Surveillance Audit</h4>
+            </div>
+            <div class="modal-body">
+                <img src="/img/process/survaudit.svg" alt="" width="100%" /> </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="kaupapamaori" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel">Kaupapa Maori</h4>
+            </div>
+            <div class="modal-body">
+
+                <h2>ISO 9001:2008 Quality Management Systems – Requirements</h2> ISO 9001 is a fully generic standard for all kinds of services and is used throughout the world as an auditing and certification standard. ISO 9001 is particularly appropriate for healthcare provider organisations that deliver a wide and diverse range of services. This standard serves as a platform on which an organisation can build its quality management system in combination with service-specific standards such as those described previously.
+
+                <h2>NZS 8157:2003 Alcohol & Other Drug Treatment Sector Standard</h2> NZS 8157 is a sector standard for providers offering treatment and support to people with alcohol and other drug addiction problems. The standard can be used alone for auditing and certification purposes by a specialist alcohol and addiction providers. Alternatively, larger and more complex provider organisations can use NZS 8157 in conjunction with other quality and risk management system standards.
+
+                <h2>NZS 8134:2008 Health & Disability Services Standard</h2> NZS 8134 is the generic quality and risk management standard for the New Zealand health and disability sector. NZS 8134 is used by a wide range of services including hospitals and residential care. As a Designated Auditing Agency, Health Audit NZ Ltd audits providers against NZS 8134 for certification for the purposes of the Health and Disability Services (Safety) Act. Other providers who do not fall under the safety regime also use NZS 8134 as a certification standard. The standard is suitable for provider organisations that deliver a variety of healthcare services.
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="resthomes" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel">Rest Homes</h4>
+            </div>
+            <div class="modal-body">
+
+                <h2>NZS 8134:2008 Health & Disability Services Standard</h2> NZS 8134 is the generic quality and risk management standard for the New Zealand health and disability sector. NZS 8134 is used by a wide range of services including hospitals and residential care. As a Designated Auditing Agency, Health Audit NZ Ltd audits providers against NZS 8134 for certification for the purposes of the Health and Disability Services (Safety) Act. Other providers who do not fall under the safety regime also use NZS 8134 as a certification standard. The standard is suitable for provider organisations that deliver a variety of healthcare services.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="daystay" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel">Day Stay Surgeries</h4>
+            </div>
+            <div class="modal-body">
+
+                <h2>NZS 8164:2005 Day-Stay Surgery & Procedures Standard</h2> NZS 8164 is a sector standard that focuses on the needs of patients undergoing day-stay and rooms/office-based surgery and procedures. This standard is used by organisations and facilities that provide surgery and procedures, and may use a theatre or a surgical unit.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="privhosp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel">Private Hospitals</h4>
+            </div>
+            <div class="modal-body">
+
+                <h2>NZS 8164:2005 Day-Stay Surgery & Procedures Standard</h2> NZS 8134 is the generic quality and risk management standard for the New Zealand health and disability sector. NZS 8134 is used by a wide range of services including hospitals and residential care. As a Designated Auditing Agency, Health Audit NZ Ltd audits providers against NZS 8134 for certification for the purposes of the Health and Disability Services (Safety) Act. Other providers who do not fall under the safety regime also use NZS 8134 as a certification standard. The standard is suitable for provider organisations that deliver a variety of healthcare services.
+
+                <h2>NZS 8164:2005 Day-Stay Surgery & Procedures Standard</h2> NZS 8164 is a sector standard that focuses on the needs of patients undergoing day-stay and rooms/office-based surgery and procedures. This standard is used by organisations and facilities that provide surgery and procedures, and may use a theatre or a surgical unit.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="pubhosp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel">Public Hospitals</h4>
+            </div>
+            <div class="modal-body">
+
+                <h2>NZS 8134:2008 Health & Disability Services Standard</h2> NZS 8134 is the generic quality and risk management standard for the New Zealand health and disability sector. NZS 8134 is used by a wide range of services including hospitals and residential care. As a Designated Auditing Agency, Health Audit NZ Ltd audits providers against NZS 8134 for certification for the purposes of the Health and Disability Services (Safety) Act. Other providers who do not fall under the safety regime also use NZS 8134 as a certification standard. The standard is suitable for provider organisations that deliver a variety of healthcare services.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="accmedclinic" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel">Accident and Medical Clinics</h4>
+            </div>
+            <div class="modal-body">
+
+                <h2>NZS 8151:2004 Accident & Medical Clinic Standard</h2> NZS 8151 is one of the sector standards that are aligned with NZS 8134. NZS 8151 sets out the quality requirements for the provision of accident and medical clinic services. These services are defined as primary care services that are episodic with a no-appointments system. Health Audit NZ Ltd is approved by the Royal College of Urgent Care (RNZCUC) as a NZS 8151 auditing and certification agency. Health Audit NZ Ltd also meets the ACC accreditation requirements for this auditing and certification service.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="homebased" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel">Home Based Services</h4>
+            </div>
+            <div class="modal-body">
+
+                <h2>NZS 8158:2012 Home & Community Support Sector Standard</h2> NZS 8158 is a sector standard for providers offering home and community support services to a wide range of people. Consumers include people with long-term support needs including physical disability, mental illness and chronic medical needs. NZS 8158 also addresses the requirements for services to people with short-term needs such as following discharge from hospital or following referral from a primary health service.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="medoffice" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel">Medical Offices and Rooms</h4>
+            </div>
+            <div class="modal-body">
+
+                <h2>NZS 8165:2005 Office/Rooms-Based Surgery and Procedures Standard</h2> NZS 8165 is a sector standard that focuses on the needs of patients undergoing day-stay and rooms/office-based surgery and procedures. This standard is used by organisations and facilities that provide surgery and procedures, and may use a theatre or a surgical unit.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="healthauditcourse" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+            <div class="modal-body">
+
+                <img src="/img/training/ha.svg" alt="" /> </div>
+
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="qualitymanagement" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+            <div class="modal-body">
+
+                <img src="/img/training/qm.svg" alt="" /> </div>
+
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="auditaccred" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+            <div class="modal-body">
+
+                <img src="/img/training/ha.svg" alt="" /> </div>
+
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+    </div>
+</div>
+    
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="../js/jquery.easing.min.js"></script>
+    <script src="../js/classie.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="../js/jqBootstrapValidation.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../js/agency.js"></script>
+
+
+    </body>
+</html>
