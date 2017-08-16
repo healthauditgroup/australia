@@ -27,677 +27,130 @@
     <![endif]-->
     <!-- Header Changer -->
     <!-- jQuery Version 1.11.0 -->
-<script src="js/jquery-1.11.0.js"></script>
-<script>
-    $(document).ready(function () {
-        var header = $('header');
+<script src=" /js/jquery-1.11.0.js "></script>
+    
+    <script>
+        (function(jQuery) {
+            var matched,
+                userAgent = navigator.userAgent || "";
 
-        var backgrounds = new Array(
-            'url(img/background/1.jpg)', 'url(img/background/2.jpg)', 'url(img/background/3.jpg)');
-//, 'url(img/background/2.jpg)'
-        var current = 0;
+            // Use of jQuery.browser is frowned upon.
+            // More details: http://api.jquery.com/jQuery.browser
+            // jQuery.uaMatch maintained for back-compat
+            jQuery.uaMatch = function(ua) {
+                ua = ua.toLowerCase();
 
-        function nextBackground() {
-            current++;
-            current = current % backgrounds.length;
-            header.css('background-image', backgrounds[current]);
-        }
-        setInterval(nextBackground, 5000);
+                var match = /(chrome)[ \/]([\w.]+)/.exec(ua) ||
+                    /(webkit)[ \/]([\w.]+)/.exec(ua) ||
+                    /(opera)(?:.*version)?[ \/]([\w.]+)/.exec(ua) ||
+                    /(msie) ([\w.]+)/.exec(ua) ||
+                    ua.indexOf("compatible") < 0 && /(mozilla)(?:.*? rv:([\w.]+))?/.exec(ua) || [];
 
-        header.css('background-image', backgrounds[0]);
-    });
-</script>
-<script>
-    (function (jQuery) {
-        var matched,
-            userAgent = navigator.userAgent || "";
-
-        // Use of jQuery.browser is frowned upon.
-        // More details: http://api.jquery.com/jQuery.browser
-        // jQuery.uaMatch maintained for back-compat
-        jQuery.uaMatch = function (ua) {
-            ua = ua.toLowerCase();
-
-            var match = /(chrome)[ \/]([\w.]+)/.exec(ua) ||
-                /(webkit)[ \/]([\w.]+)/.exec(ua) ||
-                /(opera)(?:.*version)?[ \/]([\w.]+)/.exec(ua) ||
-                /(msie) ([\w.]+)/.exec(ua) ||
-                ua.indexOf("compatible") < 0 && /(mozilla)(?:.*? rv:([\w.]+))?/.exec(ua) || [];
-
-            return {
-                browser: match[1] || "",
-                version: match[2] || "0"
+                return {
+                    browser: match[1] || "",
+                    version: match[2] || "0"
+                };
             };
-        };
 
-        matched = jQuery.uaMatch(userAgent);
+            matched = jQuery.uaMatch(userAgent);
 
-        jQuery.browser = {};
+            jQuery.browser = {};
 
-        if (matched.browser) {
-            jQuery.browser[matched.browser] = true;
-            jQuery.browser.version = matched.version;
-        }
+            if (matched.browser) {
+                jQuery.browser[matched.browser] = true;
+                jQuery.browser.version = matched.version;
 
-        // Deprecated, use jQuery.browser.webkit instead
-        // Maintained for back-compat only
-        if (jQuery.browser.webkit) {
-            jQuery.browser.safari = true;
-        }
+            }
 
-    }(jQuery));
-</script>
+            // Deprecated, use jQuery.browser.webkit instead
+            // Maintained for back-compat only
+            if (jQuery.browser.webkit) {
+                jQuery.browser.safari = true;
+            }
+
+        }(jQuery));
+
+    </script>
 </head>
 
 
-    <body id="page-top" class="index">
+<body id="page-top" class="index">
     <!-- Navigation -->
-<nav id="navbar" class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="page-scroll" href="#page-top">
-                <div class="logo light-logo"></div>
-            </a>
-        </div>
+    <nav id="navbar" class="navbar navbar-default navbar-fixed-top" style="background:none">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+<a href="http://q-audit.co.nz/" rel="home"><img src="http://q-audit.co.nz/wp-content/themes/QAudit/assets/images/logo-Q-Audit.png" style="height:50px" alt="Q-Audit logo"></a>            </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <li class="hidden">
-                    <a href="#page-top"></a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#aboutus">About Us</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#process">Our Process</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#standards">Standards</a>
-                </li>
-                <!--<li>
-                    <a class="page-scroll" href="standards">Standards</a>
-                </li>-->
-
-                <li>
-                    <a class="page-scroll" href="#team">Team</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#contact">Contact Us</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="training">Training</a>
-                </li>
-
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container-fluid -->
-</nav>
-    
-<!-- Header -->
-<header>
-  <div class="container">
-    <div class="intro-text">
-        <div class="intro-lead-in"><span class="outline">Welcome To Health Audit</span>
-      </div>
-    <!--  <div class="intro-heading">It's Nice To Meet You</div>-->
-      <a href="#aboutus" class="page-scroll btn btn-primary btn-xl">Tell Me More</a>
-    </div>
-  </div>
-</header>
-<!--
-        
-          
-        
-          
-        
-          
-        
-          
-        
- -->
-
-    <!-- About Section -->
-<section id="aboutus">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2 class="section-heading hanz-text">Welcome to Health Audit</h2>
-                <h2 class="section-subheading">Health Audit has been operating in the Australian market since                                                2003. We provide a wide range of human services standards auditing to                                                providers in the disability and healthcare sector.
-                </h2>
-            </div>
-        </div>
-        <div class="row text-center">
-            <div class="col-md-3">
-                <a href="http://www.jas-anz.org"><img src="img/accreditation/jasanz.svg" height="150vw"></a>
-                <h4 class="service-heading">Internationally accredited by JAS-ANZ</h4>
-            </div>
-            <div class="col-md-3">
-                <a href="http://www.iaf.nu//articles/IAF_MLA/14">
-                    <img src="img/accreditation/iaf.svg" height="150vw"></a>
-                <h4 class="service-heading">IAF Multilateral Recognition Arrangement (MLA) Member</h4>
-            </div>
-            <div class="col-md-3">
-                <a href="http://www.acia.net.au"><img src="img/accreditation/acia.png" height="150vw"></a>
-                <h4 class="service-heading">Endorsed Certification Body for Attendant Care Industry Standard (ACIS:2013)
-        </h4>
-            </div>
-            <div class="col-md-3">
-                <img src="img/accreditation/moh.svg" height="150vw">
-                <h4 class="service-heading">Third Party Verifier for NSW Disability Standards by the ADHC
-        </h4>
-            </div>
-        </div>
-    </div>
-</section>
-    <!-- Portfolio Grid Section -->
-<section id="process" class="bg-light-gray">
-  <div class="container">
-    <div>
-      <h2>We offer
-        <strong>the following</strong>
-      </h2>
-    </div>
-    <div class="featured-boxes" style="text-align: center;">
-      <div class="col-md-4 col-sm-6">
-        <div class="featured-box featured-box-primary">
-          <div class="box-content">
-            <img src="img/process/gapanalysis.svg" height="150px">
-            <p></p>
-            <h4 class="black">Gap Analysis</h4>
-            <p>A gap analysis is an optional pre-assessment of your management systems and procedures which identify any areas that do not adhere to the certification standards.
-              <br>
-              <br>
-            </p>
-            <p></p>
-            <a data-toggle="modal" data-target="#gapanalysis">
-              <button class="btn btn-primary btn-lg push-top push-bottom" data-toggle="modal">
-                Read more
-              </button>
-            </a>
-            <p></p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 col-sm-6">
-        <div class="featured-box featured-box-secundary">
-          <div class="box-content">
-            <img src="img/process/certification.svg" height="150px">
-            <p></p>
-            <h4 class="black">Certification Audit</h4>
-            <p>Certification audits assess your organisation's compliance to the relevant standards, and if it is attained, certification is awarded for 3 years. Once this time is up, the organisation must be re-audited and its certification renewed.
-            </p>
-            <p></p>
-            <a data-toggle="modal" data-target="#certaudit">
-              <button class="btn btn-primary btn-lg push-top push-bottom" data-toggle="modal">
-                Read more
-              </button>
-            </a>
-            <p></p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 col-sm-6">
-        <div class="featured-box featured-box-tertiary">
-          <div class="box-content">
-            <img src="img/process/surveillance.svg" height="150px">
-            <p></p>
-            <h4 class="black">Surveillance Audit</h4>
-            <p>Surveillance audits are spot audits that happen around the middle of the certification period. They ensure progress has been made and that standards haven't slipped.
-              <br>
-              <br>
-            </p>
-            <p></p>
-            <a data-toggle="modal" data-target="#survaudit">
-              <button class="btn btn-primary btn-lg push-top push-bottom" data-toggle="modal">
-                Read more
-              </button>
-            </a>
-            <p></p>
-          </div>
-        </div>
-      </div>
-        
-        <div>
-<a style="color:white" href="/australia/img/POL.010%20Impartiality%20Committee%20Policy%20(Aug%2015).pdf">    To view our commitment to managing and maintaining impartiality, click here.
-</a> <br>
-        <a style="color:white" href="/australia/img/Flowchart%20-%20How%20to%20make%20a%20complaint.pdf">    To see how to make a complaint, click here.
-</a><br>
-        <a style="color:white" href="/australia/img/Flowchart%20-%20How%20to%20appeal%20against%20a%20decision.pdf">    To see how to appeal against a decision, click here.
-</a>
-        </div>
-
-    </div>
-  </div>
-    
-</section>
-
-    <section id="standards">
-    <div class="container">
-        <div class="tabs">
-            <ul class="nav nav-tabs nav-justified">
-                <li class="">
-                    <a href="#acis" data-toggle="tab" class="text-center" aria-expanded="false">ACIS:2013<br>Attendant Care Industry Standard<br>&nbsp;</a>
-                </li>
-                <li class="active">
-                    <a href="#iso" data-toggle="tab" class="text-center" aria-expanded="true">ISO 9001:2015<br>Quality Management Systems – Requirements</a>
-                </li>
-                <li>
-                    <a href="#nsw" data-toggle="tab" class="text-center"> New South Wales<br> Disability Services Standard <br>&nbsp; </a>
-                </li>
-                <li>
-                    <a href="#hsqs" data-toggle="tab" class="text-center"> Queensland<br>Human Services Quality Standard <br> &nbsp;</a>
-                </li>
-            </ul>
-            <div class="tab-content">
-                <div id="acis" class="tab-pane">
-                    <p><a href="http://www.acia.net.au">Link to ACIA website</a>
-                        <br>
-                        <br>ACIS is the only independent, national, quality management standard that specifically addresses the provision of attendant care services. The ACIS can and is being applied to assess the quality of services being delivered to any individual requiring low, moderate or high levels of support to live in their community
-                        <br>
-                        <br>ACIS focuses on the key issues required to deliver high quality, individualised attendant care in the community. It is applicable to any attendant care provider offering low, moderate or high levels of support for people to live in their community and is not limited in scope to any one particular government department or funder.
-                        <br>
-                        <!--<br><a href="pdf/acis2013.pdf">Here</a> is a summary of ACIS-->
-                    </p>
-                </div>
-                <div id="iso" class="tab-pane  active">
-                    <p><a href="http://www.iso.org/iso/home/store/catalogue_ics/catalogue_detail_ics.htm?csnumber=62085">Link to ISO website</a> </p>
-                    <p>This standard is based on a number of quality management principles including a strong customer focus, the motivation and implication of top management, the process approach and continual improvement. These principles are explained in more detail in <a href="pdf/iso.pdf">this linked pdf</a>.
-                        <br>
-                        <br>Using ISO 9001:2015 helps ensure that customers get consistent, good quality products and services, which in turn brings many business benefits.
-                        <br>
-                        <br> The standards provide guidance and tools for companies and organizations who want to ensure that their products and services consistently meet customer’s requirements, and that quality is consistently improved. text.
-                    </p>
-                </div>
-                <div id="nsw" class="tab-pane ">
-                    <p><a href="http://www.adhc.nsw.gov.au/sp/quality/standards_in_action">Link to NSW DSS site</a>
-                    </p>
-                    <p>The National Standards for Disability Services (National Standards) will help to promote and drive a nationally consistent approach to improving the quality of services. They focus on rights and outcomes for people with disability.
-                        <br>
-                        <br>The National Standards reflect the move towards person-centred approaches whereby people with disability are at the centre of planning and delivery. Person-centred approaches ensure that individuals are in the centre of service design, planning, delivery and review. Individuals shape and direct service and support arrangements to suit their strengths, needs and goals with the support of families, friends, carers and advocates.
-                    </p>
-                </div>
-                <div id="hsqs" class="tab-pane">
-                    <p><a href="http://www.communities.qld.gov.au/gateway/funding-and-grants/human-services-quality-framework">Link to HSQF website </a>
-                     - Health Audit is in the final stages of undergoing JAS-ANZ accreditation to audit this standard</p>
-                    <p>The Human Services Quality Framework (HSQF) is a new quality assurance framework for measuring and improving the quality of human services.
-                        <br>
-                        <br>The HSQS combines the quality standards for disability services, community care, child safety and community services and cover the core elements for quality service provision, including
-                    </p>
-                    <ul style="list-style: initial;">
-                        <li> governance and management</li>
-                        <li> service access </li>
-                        <li>responding to individual need</li>
-                        <li> safety, wellbeing and rights </li>
-                        <li>feedback, complaints and appeals </li>
-                        <li>human resources.
-                        </li>
-                    </ul>
-                    <p></p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-    <!-- Team Section -->
-<section id="team" class="bg-light-gray">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2 class="section-heading">Meet the Team</h2>
-            </div>
-        </div>
-        <div class="row">
-            
-            <div class="col-sm-4">
-                <div class="team-member">
-                    <img src="img/team/1.jpg" class="img-responsive img-circle team-circle" alt="">
-                    <h4>Majid Zahoor</h4>
-                    <p class="">Managing Director</p>
-
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="col-sm-4">
-                <div class="team-member">
-                    <img src="img/team/2.jpg" class="img-responsive img-circle team-circle" alt="">
-                    <h4>Gael Whitfield</h4>
-                    <p class="">Office Manager</p>
-
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="col-sm-4">
-                <div class="team-member">
-                    <img src="img/team/3.jpg" class="img-responsive img-circle team-circle" alt="">
-                    <h4>Lyn Holmes</h4>
-                    <p class="">HAA Co-ordinator</p>
-
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="col-sm-4">
-                <div class="team-member">
-                    <img src="img/team/4.jpg" class="img-responsive img-circle team-circle" alt="">
-                    <h4>Penny London</h4>
-                    <p class="">Technical Expert/Lead Auditor</p>
-
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="col-sm-4">
-                <div class="team-member">
-                    <img src="img/team/5.jpg" class="img-responsive img-circle team-circle" alt="">
-                    <h4>Sonia Nieuwoudt</h4>
-                    <p class="">HDSS Co-ordinator</p>
-
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="col-sm-4">
-                <div class="team-member">
-                    <img src="img/team/6.jpg" class="img-responsive img-circle team-circle" alt="">
-                    <h4>Andrea Franklin</h4>
-                    <p class="">HANZ Co-ordinator</p>
-
-                    </ul>
-                </div>
-            </div>
             
         </div>
-</section>
-    <section>
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-            <li data-target="#myCarousel" data-slide-to="3"></li>
-        </ol>
-        <h2 class="section-heading col-md-offset-2"><strong>What</strong> Clients Say</h2>
+        <!-- /.container-fluid -->
+    </nav>
 
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner" role="listbox">
-            <div class="item active">
-                <div class="col-md-8 col-md-offset-2">
-                    <blockquote class="testimonial">
-                        <h2 class="white">The auditors had positive and encouraging attitudes as well as being very thorough. I felt that they gave valuable recommendations and it was a learning experience rather than a mechanical process.</h2>
-                    </blockquote>
-                </div>
-            </div>
-
-            <div class="item">
-                <div class="col-md-8 col-md-offset-2">
-                    <blockquote class="testimonial">
-                        <h2 class="white">If all auditors can be like them, no manager would ever dread having an audit done. Very professional in their dealings, and it felt like the staff were having their knowledge updated rather than an interrogation or being subjected to finding faults
-</h2>
-                    </blockquote>
-
-                </div>
-            </div>
-
-            <div class="item">
-                <div class="col-md-8 col-md-offset-2">
-                    <blockquote class="testimonial">
-                        <h2 class="white">I would not have second thoughts in maintaining our auditing to be done by Health Audit.  I will always share the uplifting and nurturing experience that I had with the two auditors to anybody who may have doubts of which auditing body to take.
-</h2>
-                    </blockquote>
-
-                </div>
-            </div>
-
-            <div class="item">
-                <div class="col-md-8 col-md-offset-2">
-                    <blockquote class="testimonial">
-                        <h2 class="white">We have learned from you and discovered ways to strengthen our business and service provision practices through the Audit process. This could be a very challenging and difficult experience which we dread to have, but your approach makes it quite the opposite.</h2>
-                    </blockquote>
-
-                </div>
-            </div>
-        </div>
-
-        <!-- Left and right controls -->
-        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-            <span class="fa fa-arrow-left fa-5x" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-            <span class="fa fa-arrow-right fa-5x" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div>
-    <!-- <div class="col-md-6 col-md-offset-3 container">
-            <h2><strong>What</strong> Clients Say</h2>
+   <!-- About Section -->
+    <section id="aboutus" style="">
+        <div class="container">
             <div class="row">
-                <div class="owl-carousel push-bottom" data-plugin-options='{"items": 1}'>
-                    <div>
-                        
-
-                        </div>
-                    </div>
-                    <div>
-                        
-                    </div>
-                    <div>
-                        
-                    </div>
-                    <div>
-                        
-                    </div>
-                    <div>
-                        <div class="col-md-12">
-                            <blockquote class="testimonial">
-                                <h2 class="white">We felt the process was about improvement more than being an audit. The auditors respected where we had come from and where we were going. Excellent.</h2>
-                            </blockquote>
-                            <div class="testimonial-arrow-down"></div>
-
-                        </div>
-                    </div>
-                    
-                    <!--<div>
-                        <div class="col-md-12">
-                            <blockquote class="testimonial">
-                                <h2 class="white">We felt that the auditors respected where we had come from and where we were going.</h2>
-                            </blockquote>
-                            <div class="testimonial-arrow-down"></div>
-
-                        </div>
-                    </div>
-                    <!--
-                    <div>
-                        <div class="col-md-12">
-                            <blockquote class="testimonial">
-                                <h2 class="white">We felt that the auditors respected where we had come from and where we were going.</h2>
-                            </blockquote>
-                            <div class="testimonial-arrow-down"></div>
-
-                        </div>
-                    </div>
-                    
-                    
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading hanz-text">What's in a Name? Find out Why We’ve Changed Ours.</h2>
                 </div>
             </div>
-        </div>-->
-</section>
-    <section id="contact" class="bg-light-gray">
-    <div class="container">
-
-        <div class="row" id="contact">
-            <div class="col-md-6">
-
-                <div class="alert alert-success hidden" id="contactSuccess">
-                    <strong>Success!</strong> Your message has been sent to us.
-                </div>
-
-                <div class="alert alert-danger hidden" id="contactError">
-                    <strong>Error!</strong> There was an error sending your message.
-                </div>
-                <script>
-                    function myFunction() {
-                        alert("The form was submitted");
-
-                    }
-                </script>
-
-                <h2 class="short text-shadow big bold push-top" data-appear-animation="fadeInUp"><strong>Contact</strong> Us</h2>
-                <div class="ss-form">
-                    <script type="text/javascript">
-                        var submitted = false;
-                    </script>
-                    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){window.alert('Thanks! Your enquiry has been submitted');}"></iframe>
-                    <form action="https://docs.google.com/forms/d/1kHnLjSzOUXbWrU16SRAT42gmhLaiyC0fsSbDZwByj-w/formResponse" method="POST" id="ss-form" target="hidden_iframe" onsubmit="submitted=true;">
-                        <ol role="list" class="ss-question-list" style="padding-left: 0">
-                            <div class="ss-form-question errorbox-good" role="listitem">
-                                <div dir="ltr" class="ss-item  ss-text col-md-6">
-                                    <div class="ss-form-entry">
-                                        <label class="ss-q-item-label" for="entry_1538764599">
-                                            <div class="ss-q-title">Your Name
-                                            </div>
-                                            <div class="ss-q-help ss-secondary-text" dir="ltr"></div>
-                                        </label>
-                                        <input type="text" name="entry.1538764599" value="" class="ss-q-short form-control" id="entry_1538764599" dir="auto" aria-label="Your Name  " title="" data-msg-required="Please enter your name." required>
-                                        <div class="error-message" id="512697291_errorMessage"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ss-form-question errorbox-good" role="listitem">
-                                <div dir="ltr" class="ss-item  ss-text col-md-6">
-                                    <div class="ss-form-entry">
-                                        <label class="ss-q-item-label" for="entry_1892615498">
-                                            <div class="ss-q-title">Business Name
-                                            </div>
-                                            <div class="ss-q-help ss-secondary-text" dir="ltr"></div>
-                                        </label>
-                                        <input type="text" name="entry.1892615498" value="" class="ss-q-short form-control" id="entry_1892615498" dir="auto" aria-label="Your business name  " title="">
-                                        <div class="error-message" id="1681606943_errorMessage"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ss-form-question errorbox-good" role="listitem">
-                                <div dir="ltr" class="ss-item  ss-text col-md-6">
-                                    <div class="ss-form-entry">
-                                        <label class="ss-q-item-label" for="entry_70583362">
-                                            <div class="ss-q-title">Your email address
-                                            </div>
-                                            <div class="ss-q-help ss-secondary-text" dir="ltr"></div>
-                                        </label>
-                                        <input type="email" name="entry.70583362" value="" class="ss-q-short form-control" id="entry_70583362" dir="auto" aria-label="Your email address must be a valid email address  " title="Must be a valid email address" data-msg-email="Please enter a valid email address." data-msg-required="Please enter your email address." aria-required="true" required>
-                                        <div class="error-message" id="477123048_errorMessage"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ss-form-question errorbox-good" role="listitem">
-                                <div dir="ltr" class="ss-item  ss-text col-md-6">
-                                    <div class="ss-form-entry">
-                                        <label class="ss-q-item-label" for="entry_214925440">
-                                            <div class="ss-q-title">Contact Number
-                                            </div>
-                                            <div class="ss-q-help ss-secondary-text" dir="ltr"></div>
-                                        </label>
-                                        <input type="text" name="entry.214925440" value="" class="ss-q-short form-control" id="entry_214925440" dir="auto" aria-label="Contact Number   " title="">
-                                        <div class="error-message" id="414032181_errorMessage"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div for="entry_1263841555" class="col-md-12 ss-q-item-label">
-                                <label>Type of Organisation</label>
-                                <select data-msg-required="Type of Organisation " class="form-control" name="entry.1263841555" id="entry_1263841555" required="" aria-required="true">
-                                    <option value=""></option>
-                                    <option value="Kaupapa Māori">Kaupapa Māori</option>
-                                    <option value="Rest Homes">Rest Homes</option>
-                                    <option value="Day Stay surgeries">Day Stay surgeries</option>
-                                    <option value="Private Hospitals">Private Hospitals</option>
-                                    <option value="Public Hospitals">Public Hospitals</option>
-                                    <option value="Accident and Medical Clinics">Accident and Medical Clinics</option>
-                                    <option value="Home Based Services">Home Based Services</option>
-                                    <option value="Medical offices and Rooms">Medical offices and Rooms</option>
-                                    <option value="Other (type in Message section)">Other (type in Message section)</option>
-                                </select>
-                            </div>
-                            <div class="ss-form-question errorbox-good" role="listitem">
-                                <div dir="ltr" class="ss-item  ss-paragraph-text">
-                                    <div class="ss-form-entry col-md-12">
-                                        <label class="ss-q-item-label" for="entry_742557199">
-                                            <div class="ss-q-title">Message
-                                            </div>
-                                            <div class="ss-q-help ss-secondary-text" dir="ltr"></div>
-                                        </label>
-                                        <textarea name="entry.742557199" rows="8" cols="0" class="ss-q-long form-control" id="entry_742557199" dir="auto" aria-label="Message  "></textarea>
-                                        <div class="error-message" id="61474576_errorMessage"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <input type="hidden" name="draftResponse" value="[,,&quot;-6644385798617183039&quot;]
-">
-                            <input type="hidden" name="pageHistory" value="0">
-
-
-                            <input type="hidden" name="fbzx" value="-6644385798617183039">
-
-                            <div class="ss-item ss-navigate">
-                                <table id="navigation-table">
-                                    <tbody>
-                                        <tr>
-                                            <td class="ss-form-entry goog-inline-block" id="navigation-buttons" dir="ltr">
-                                                <input type="submit" name="submit" value="Submit" id="ss-submit" class="jfk-button jfk-button-action btn btn-primary btn-lg ">
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </ol>
-                    </form>
-                </div>
-            </div>
-            <div class="col-md-6">
-
-                <hr>
-                <p>You can use this form to send us general enquries or request a quote.</p>
-
-                <hr />
-
-                <h4>The <strong>Office</strong></h4>
-                <ul class="list-unstyled">
-                    <li><i class="fa fa-map-marker"></i> <strong>Address:</strong> 24 Fusion Road, Flat Bush, Auckland NZ 2016</li>
-                    <li><i class="fa fa-phone"></i> <strong>Phone:</strong> (1800) 087-659</li>
-                    <li><i class="fa fa-envelope"></i> <strong>Email:</strong> <a href="mailto:enquiries@healthauditgroup.com" style="color:#fcd116">enquiries@healthauditgroup.com</a>
-                    </li>
-                </ul>
-
-                <hr />
-
-
-
-            </div>
-
+            
         </div>
+        <div class="container" style="">
+            <div class="col-md-12 col-lg-12 col-sm-12" style="text-align: center;">
 
-    </div>
-</section>
+“I read in a book once that a rose by any other name would smell as sweet, but I’ve never been able to believe it. I don’t believe a rose WOULD be as nice if it was called a thistle or a skunk cabbage.” <br> 
+– L.M Montgomery, Anne of Green Gables.  <br>
+
+Like Anne of Green Gables, we believe that names have power; which is why we’ve changed our name from Health Audit NZ to &#8203;Q-Audit. <br>
+<h2>Why?</h2>
+<br>  
+		   
+Well, names contain our identity - &#8203;who we are. But they also reflect where &#8203; we are going. It was time for our name to promulgate who we have become and raise the bar at the same time.  <br>
+
+Like our clients, we’ve been on a journey since we first started operating as Health Audit NZ in 1993. During that time we’ve established a reputation for quality auditing and quality certification services to the medical, health, support and care services.  <br>
+
+We’re proud of the authority that we have built within the industry, as well as the fact that we’ve embraced technology. <br>In an industry that is historically conservative when it comes to digital innovation, we’ve led the way. <br>
+
+Ensuring quality is also about being adaptive, which is why we are always looking at how we can improve our services and streamline our processes, to improve the standard of every organisation we work with.  <br>
+
+<h2>So, it’s simple. The ‘Q’ in ‘Q-Audit’ stands for ‘Quality’. </h2>
+
+A dedication to quality weaves through everything we do.  Approval from us &#8203;purveys quality&#8203; – we give businesses the peace of mind that their systems are in excellent working order.  <br>
+		    <img src="http://q-audit.co.nz/wp-content/uploads/2017/05/HAG-0002_Q-Audit_Logo_Animation-505x284.gif"><br>
+
+No doubt your eagle eye has noted that the &#8203;‘Q’&#8203; in the new logo stands above &#8203;–&#8203;AUDIT&#8203;. That represents its importance to our core mission. Our designers have used a strong, bold typeface that has the authority that we do. Blue represents the trust and loyalty we have earned from our customers.<br>
+
+We’re excited about the future. Our new name has put a spring in our step – we hope you’ll walk with us as we continue to work with the New Zealand healthcare sector to ensure quality.  <br>
+
+Get to know the new us – take a tour through our dynamic new site.  
+                 <br>
+                <br>
+                <a href="http://q-audit.co.nz">
+                    <button class="btn btn-primary btn-lg push-top push-bottom">
+                        Q-Audit
+                    </button>
+                </a>
+            </div>
+            
+        </div>
+    </section>
+    
     <footer class="short hanzcolour" id="footer">
     <div class="container">
         <div class="row">
             <div class="col-md-8" id="infolol">
 
                 <h3>Health Audit</h3>
-                <p class="white"> A subsidiary of <a href="http://healthauditgroup.com">Health Audit Group</a>
                 </p>
-                <p class="white" style="padding-top: 70px;">© Copyright Health Audit 2016. All Rights Reserved.</p>
+                <p class="white" style="padding-top: 70px;">© Copyright Q-Audit 2017. All Rights Reserved.</p>
 
                 <hr class="light">
             </div>
@@ -705,7 +158,7 @@
                 <h5 class="contact">Contact Us</h5>
                 <span class="phone">(1800) 087-659</span>
                 <ul class="list icons list-unstyled">
-                    <li><i class="fa fa-envelope white"></i> <a href="mailto:manager@healthauditgroup.com">manager@healthauditgroup.com</a>
+                    <li><i class="fa fa-envelope white"></i> <a href="mailto:manager@q-audit.com.au">manager@q-audit.com.au</a>
                     </li>
                 </ul>
             </div>
@@ -713,254 +166,7 @@
     </div>
 
 </footer>
-    <div class="modal fade" id="gapanalysis" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog" style="text-align:left; width:40%; height:30%;">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h4 class="modal-title" id="myModalLabel">Gap Analysis</h4>
-            </div>
-            <div class="modal-body">
-                <ul>
-                    <li>This assesses the readiness of your quailty and risk management systems and greatly helps in the planning and preparation for a subsequent certification audit.</li>
-                    <li> A gap analysis involves an on-site review by one of our lead auditors with your management and staff members.</li>
-                    <li>The auditor samples documentation and interviews personnel in order to gather information about how the management system addresses the requirements of the certification standards.</li>
-                    <li> Documentation reviewed during the gap analysis includes organisational and health service policy and procedures and also records of clients, staff members and service delivery.
-                    </li>
-                </ul>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<div class="modal fade" id="certaudit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h4 class="modal-title" id="myModalLabel">Certification Audit</h4>
-            </div>
-            <div class="modal-body">
-                <img src="/australia/img/process/certaudit.svg" alt="" width="100%" /> </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<div class="modal fade" id="survaudit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h4 class="modal-title" id="myModalLabel">Surveillance Audit</h4>
-            </div>
-            <div class="modal-body">
-                <img src="/australia/img/process/survaudit.svg" alt="" width="100%" /> </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<div class="modal fade" id="kaupapamaori" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h4 class="modal-title" id="myModalLabel">Kaupapa Maori</h4>
-            </div>
-            <div class="modal-body">
-
-                <h2>ISO 9001:2015 Quality Management Systems – Requirements</h2> ISO 9001 is a fully generic standard for all kinds of services and is used throughout the world as an auditing and certification standard. ISO 9001 is particularly appropriate for healthcare provider organisations that deliver a wide and diverse range of services. This standard serves as a platform on which an organisation can build its quality management system in combination with service-specific standards such as those described previously.
-
-                <h2>NZS 8157:2003 Alcohol & Other Drug Treatment Sector Standard</h2> NZS 8157 is a sector standard for providers offering treatment and support to people with alcohol and other drug addiction problems. The standard can be used alone for auditing and certification purposes by a specialist alcohol and addiction providers. Alternatively, larger and more complex provider organisations can use NZS 8157 in conjunction with other quality and risk management system standards.
-
-                <h2>NZS 8134:2008 Health & Disability Services Standard</h2> NZS 8134 is the generic quality and risk management standard for the New Zealand health and disability sector. NZS 8134 is used by a wide range of services including hospitals and residential care. As a Designated Auditing Agency, Health Audit NZ Ltd audits providers against NZS 8134 for certification for the purposes of the Health and Disability Services (Safety) Act. Other providers who do not fall under the safety regime also use NZS 8134 as a certification standard. The standard is suitable for provider organisations that deliver a variety of healthcare services.
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="modal fade" id="resthomes" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h4 class="modal-title" id="myModalLabel">Rest Homes</h4>
-            </div>
-            <div class="modal-body">
-
-                <h2>NZS 8134:2008 Health & Disability Services Standard</h2> NZS 8134 is the generic quality and risk management standard for the New Zealand health and disability sector. NZS 8134 is used by a wide range of services including hospitals and residential care. As a Designated Auditing Agency, Health Audit NZ Ltd audits providers against NZS 8134 for certification for the purposes of the Health and Disability Services (Safety) Act. Other providers who do not fall under the safety regime also use NZS 8134 as a certification standard. The standard is suitable for provider organisations that deliver a variety of healthcare services.
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="modal fade" id="daystay" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h4 class="modal-title" id="myModalLabel">Day Stay Surgeries</h4>
-            </div>
-            <div class="modal-body">
-
-                <h2>NZS 8164:2005 Day-Stay Surgery & Procedures Standard</h2> NZS 8164 is a sector standard that focuses on the needs of patients undergoing day-stay and rooms/office-based surgery and procedures. This standard is used by organisations and facilities that provide surgery and procedures, and may use a theatre or a surgical unit.
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="modal fade" id="privhosp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h4 class="modal-title" id="myModalLabel">Private Hospitals</h4>
-            </div>
-            <div class="modal-body">
-
-                <h2>NZS 8164:2005 Day-Stay Surgery & Procedures Standard</h2> NZS 8134 is the generic quality and risk management standard for the New Zealand health and disability sector. NZS 8134 is used by a wide range of services including hospitals and residential care. As a Designated Auditing Agency, Health Audit NZ Ltd audits providers against NZS 8134 for certification for the purposes of the Health and Disability Services (Safety) Act. Other providers who do not fall under the safety regime also use NZS 8134 as a certification standard. The standard is suitable for provider organisations that deliver a variety of healthcare services.
-
-                <h2>NZS 8164:2005 Day-Stay Surgery & Procedures Standard</h2> NZS 8164 is a sector standard that focuses on the needs of patients undergoing day-stay and rooms/office-based surgery and procedures. This standard is used by organisations and facilities that provide surgery and procedures, and may use a theatre or a surgical unit.
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="modal fade" id="pubhosp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h4 class="modal-title" id="myModalLabel">Public Hospitals</h4>
-            </div>
-            <div class="modal-body">
-
-                <h2>NZS 8134:2008 Health & Disability Services Standard</h2> NZS 8134 is the generic quality and risk management standard for the New Zealand health and disability sector. NZS 8134 is used by a wide range of services including hospitals and residential care. As a Designated Auditing Agency, Health Audit NZ Ltd audits providers against NZS 8134 for certification for the purposes of the Health and Disability Services (Safety) Act. Other providers who do not fall under the safety regime also use NZS 8134 as a certification standard. The standard is suitable for provider organisations that deliver a variety of healthcare services.
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="modal fade" id="accmedclinic" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h4 class="modal-title" id="myModalLabel">Accident and Medical Clinics</h4>
-            </div>
-            <div class="modal-body">
-
-                <h2>NZS 8151:2004 Accident & Medical Clinic Standard</h2> NZS 8151 is one of the sector standards that are aligned with NZS 8134. NZS 8151 sets out the quality requirements for the provision of accident and medical clinic services. These services are defined as primary care services that are episodic with a no-appointments system. Health Audit NZ Ltd is approved by the Royal College of Urgent Care (RNZCUC) as a NZS 8151 auditing and certification agency. Health Audit NZ Ltd also meets the ACC accreditation requirements for this auditing and certification service.
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="modal fade" id="homebased" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h4 class="modal-title" id="myModalLabel">Home Based Services</h4>
-            </div>
-            <div class="modal-body">
-
-                <h2>NZS 8158:2012 Home & Community Support Sector Standard</h2> NZS 8158 is a sector standard for providers offering home and community support services to a wide range of people. Consumers include people with long-term support needs including physical disability, mental illness and chronic medical needs. NZS 8158 also addresses the requirements for services to people with short-term needs such as following discharge from hospital or following referral from a primary health service.
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="modal fade" id="medoffice" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h4 class="modal-title" id="myModalLabel">Medical Offices and Rooms</h4>
-            </div>
-            <div class="modal-body">
-
-                <h2>NZS 8165:2005 Office/Rooms-Based Surgery and Procedures Standard</h2> NZS 8165 is a sector standard that focuses on the needs of patients undergoing day-stay and rooms/office-based surgery and procedures. This standard is used by organisations and facilities that provide surgery and procedures, and may use a theatre or a surgical unit.
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="modal fade" id="healthauditcourse" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            </div>
-            <div class="modal-body">
-
-                <img src="/australia/img/training/ha.svg" alt="" /> </div>
-
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-    </div>
-</div>
-<div class="modal fade" id="qualitymanagement" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            </div>
-            <div class="modal-body">
-
-                <img src="/australia/img/training/qm.svg" alt="" /> </div>
-
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-    </div>
-</div>
-<div class="modal fade" id="auditaccred" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            </div>
-            <div class="modal-body">
-
-                <img src="/img/training/ha.svg" alt="" /> </div>
-
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-    </div>
-</div>
+    
     
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
